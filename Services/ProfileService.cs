@@ -1,20 +1,18 @@
-﻿using IdentityServer4.Models;
+﻿using IdentityServer.Models;
+using IdentityServer4.Models;
 using IdentityServer4.Services;
 using Microsoft.AspNetCore.Identity;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace IdentityServer.Services
 {
     public class ProfileService : IProfileService
     {
-        private UserManager<IdentityUser> _userManager;
+        private UserManager<ApplicationUser> _userManager;
 
-        public ProfileService(UserManager<IdentityUser> userManager)
+        public ProfileService(UserManager<ApplicationUser> userManager)
         {
             _userManager = userManager;
         }
