@@ -15,7 +15,7 @@ namespace IdentityServer
                    {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
-                new IdentityResource(name: "user", userClaims: new [] {JwtClaimTypes.Email})
+                new IdentityResource(name: "user", userClaims: new [] {JwtClaimTypes.Email, JwtClaimTypes.Name})
                    };
 
         public static IEnumerable<ApiScope> ApiScopes =>
