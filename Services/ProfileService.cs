@@ -24,8 +24,8 @@ namespace IdentityServer.Services
 
             var claims = new List<Claim>()
             {
-                new Claim(JwtClaimTypes.Email, user.Email),
-                new Claim(JwtClaimTypes.Name, user.UserName)
+                new Claim("Email", user.Email),
+                new Claim("userName", user.UserName)
             };
 
             context.IssuedClaims.AddRange(claims);
