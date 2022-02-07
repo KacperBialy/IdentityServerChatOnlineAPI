@@ -25,7 +25,6 @@ namespace IdentityServer.Services
             var claims = new List<Claim>()
             {
                 new Claim("Email", user.Email),
-                new Claim("userName", user.UserName)
             };
 
             context.IssuedClaims.AddRange(claims);
